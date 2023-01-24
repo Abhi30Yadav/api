@@ -28,8 +28,11 @@ use Illuminate\Support\Facades\Route;
 // Route::delete('users/{id}',function($id){
 //     return response()->json($id,200);
 // });
-Route::get('/test', function (){
-    p('working');
-});
+// Route::get('/test', function (){
+//     p('working');
+// });
 
 Route::post('user/store',[App\Http\Controllers\Api\UserController::class, 'store']);
+Route::get('user/get/{flag}',[App\Http\Controllers\Api\UserController::class, 'index']);
+Route::get('user/{id}',[App\Http\Controllers\Api\UserController::class, 'show']);
+Route::delete('user/delete/{id}',[App\Http\Controllers\Api\UserController::class, 'destroy']);

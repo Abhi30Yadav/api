@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
            $table->string('contact')->nullable();
            $table->text('address')->nullable();
-           $table->string('pincode',6);
+           $table->string('pincode',6)->nullable();
            $table->boolean('status')->comment('1:Actice and 2:Inactive')->default(1);
         });
     }
@@ -31,7 +31,7 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
            $table->string('contact')->nullable();
            $table->text('address')->nullable();
-           $table->string('pincode',6);
+           $table->string('pincode',6)->nullable();
            $table->boolean('status')->comment('1:Actice and 2:Inactive')->default(1);
         });
     }
